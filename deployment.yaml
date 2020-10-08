@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: web_deployment
+   
+spec:
+   replicas: 1
+   selector:
+      matchLabels:
+        env: production
+   template:
+      metadata:
+         name: my-webimage-pod
+         labels:
+           env: production
+      spec:
+         containers:
+          - name: my-webimage-container
+            image: dhttpd:v1
