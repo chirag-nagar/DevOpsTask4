@@ -5,3 +5,4 @@ sudo kubectl replace -f deployment.yaml --kubeconfig /minikube_client/config
 else
 sudo kubectl create -f deployment.yaml  --kubeconfig /minikube_client/config
 sudo kubectl expose deployment web_deployment --port=80 --type=NodePort --kubeconfig /minikube_client/config
+fi
