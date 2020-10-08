@@ -1,0 +1,8 @@
+sudo mkdir -p /root/DevOpsTask4
+sudo cp -rvf * /root/DevOpsTask4
+
+sudo cd /root/DevOpsTask4
+sudo docker build -t chiragnagar/dhttpd:v1 .
+sudo docker login -u chiragnagar -p Redhat8@123q
+sudo docker push chiragnagar/dhttpd:v1
+
